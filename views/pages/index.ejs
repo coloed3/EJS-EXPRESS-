@@ -1,0 +1,41 @@
+<!-- view/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <% include ../partials/head%>
+</head>
+
+<body>
+  <header>
+   <% include ../partials/header %>
+  </header>
+    <main>
+        <div class="jumbotron ">
+                <h1 class=" py-4 text-muted"> This is Great</h1>
+                <p> <%= tagline %></p>
+        </div>
+        <div class="row">
+                <div class="col-md-4">
+                     <ul class="list-group">
+                        <% drinks.forEach(function(drink){ %>
+                        <li class="list-group-item"><%= drink.name %> - <%= drink.drunkness %> </li>
+                            <%  })%>
+                    </ul>
+                </div>
+                <div class="col-md-8 "> 
+                        <h1> testing </h1>
+                </div>
+        </div>
+      
+    </main>
+
+
+<footer>
+
+    <% include ../partials/footer %>
+</footer>
+</body>
+
+</html>
